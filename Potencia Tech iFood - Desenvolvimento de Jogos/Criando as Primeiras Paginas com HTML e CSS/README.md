@@ -18,7 +18,7 @@
 
 ~~~html
 <html>
-Texto texto texto **nesse caso, tudo que tiver entre as tags HTML, será entendido como HTML**
+Texto texto texto **nesse caso, tudo que tiver entre as tags HTML, será entendido conteúdo**
 </html>  
 ~~~ 
 
@@ -288,7 +288,7 @@ Type range define um campo scroll em que se pode colocar valores mínimos, máxi
 </body>
 ~~~
 
-![range](/estudos-e-bootcamps/Potencia%20Tech%20iFood%20-%20Desenvolvimento%20de%20Jogos/imgs/5inputrange.png)
+![range](imgs/5inputrange.png)
 
 - **input type="color"**
  Cria um campo scroll similar ao range, mas que funciona com cores.
@@ -301,7 +301,7 @@ Type range define um campo scroll em que se pode colocar valores mínimos, máxi
 </body>
 ~~~
 
-![inputcor](/estudos-e-bootcamps/Potencia%20Tech%20iFood%20-%20Desenvolvimento%20de%20Jogos/imgs/6inputcor.png)
+![inputcor](imgs/6inputcor.png)
 
 - **input type="email"**
 Campo email, pode possuir problemas de compatibilidade com navegador, apenas aceita preenchimento no formato de email (que o próprio navegador avisa caso não seja definido um alerta):
@@ -314,7 +314,7 @@ Campo email, pode possuir problemas de compatibilidade com navegador, apenas ace
 </body>
 ~~~
 
-![inputemail](/estudos-e-bootcamps/Potencia%20Tech%20iFood%20-%20Desenvolvimento%20de%20Jogos/imgs/7inputemail.png)
+![inputemail](imgs/7inputemail.png)
 
 - **input type="url"**
 Assim como campo email, não aceita formato fora do padrão de url (com http na frente). Assim como o campo email, cada navegador implementa uma mensagem automática se o preenchimento for incorreto, caso na seja definida uma:
@@ -385,7 +385,7 @@ Obs.: A posição do que vai aparecer para o usuário no script importa. Caso co
 </body>
 ~~~
 
-![ordeminput](/estudos-e-bootcamps/Potencia%20Tech%20iFood%20-%20Desenvolvimento%20de%20Jogos/imgs/8inputordem.png)
+![ordeminput](imgs/8inputordem.png)
 
 ~~~html
 <body>
@@ -396,7 +396,7 @@ Obs.: A posição do que vai aparecer para o usuário no script importa. Caso co
 </body>
 ~~~
 
-![ordeminput](/estudos-e-bootcamps/Potencia%20Tech%20iFood%20-%20Desenvolvimento%20de%20Jogos/imgs/9inputordem.png)
+![ordeminput](imgs/9inputordem.png)
 
 Obs.²: a opçãO **disabled** deixa inabilitado a opção para o usuário (o que pode ser necessário por algum motivo, por exmplo, em um hamburguer com carne dupla, poderia ser definido que não pode dobrar a quantidade de carnne):
 
@@ -459,7 +459,67 @@ Campo que permite criar um espaço para fazer buscas.
 ~~~
 
 ## Tag "button"
+- **button type="button"**
+Cria um botão sem função, função deve ser adicionada por JS com as "ações on-" por exemplo
 
+~~~html
+<body>
+    <form>
+        <button type="button">Clicável</button>
+    </form>
+</body>
+~~~
+
+- **button type="reset"**
+Cria um botão que limpa os campos do formulário.
+
+~~~html
+<body>
+    <form>
+        <button type="reset">Limpar</button>
+    </form>
+</body>
+~~~
+
+- **button type="submit"**
+Cria um botão que envia formulário preenchido.
+
+~~~html
+<body>
+    <form>
+        <button type="submit">Enviar</button>
+    </form>
+</body>
+~~~
+
+Obs.: o botão submit pode ser colocado uma ação em JS na tag formulário para definir ações como validação do formulário, confirmar envio entre outos. Esse tipo de ação é interessante pois garente que o envio/submit não seja feito sem querer através da tecla ENTER por exemplo (que aciona pelo teclado o envio).
+
+## Tag "select"
+Cria uma lista de opções pré-definidas para preencher o formulário.
+
+~~~html
+<label for="cars">Choose a car:</label>
+
+<select name="cars" id="cars">
+  <option value="volvo">Volvo</option>
+  <option value="saab">Saab</option>
+  <option value="mercedes">Mercedes</option>
+  <option value="audi">Audi</option>
+</select>
+~~~
+
+Outra forma de desenvolver com essa tag. O uso do atribudo "selected" define o que vai estar aparecendo/marcado como padrão. Já o atributo "multiple" do select permite que mais de uma opção seja selecionada pelo usuário:
+
+~~~html
+<label>Cargo:</label>
+<select name="role">
+  <option selected value="">Selecione o cargo</option>
+  <option value="Administrativo">Administrativo</option>
+  <option value="Gerência">Gerência</option>
+  <option value="Direção">Direção</option>
+  <option value="Presidência">Presidência</option>
+</select>
+~~~
 
 # Links Úteis:
 - Para mais tags: [w3schools](https://www.w3schools.com/tags/)
