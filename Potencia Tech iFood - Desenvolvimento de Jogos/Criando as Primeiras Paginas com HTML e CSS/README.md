@@ -184,12 +184,12 @@ No navegador, colocar/usar:
 - **CTRL + Shift + I**
 - ou pelo menu lateral, em mais ferramentas
 
-![acessoaasferramentas](/estudos-e-bootcamps/Potencia%20Tech%20iFood%20-%20Desenvolvimento%20de%20Jogos/imgs/1ferramentasprogramador.png)
+![acessoaasferramentas](imgs/1ferramentasprogramador.png)
 
 Para inspecionar os elementos de uma página:
 - **CTRL + SHIFT + C**
 - Ou selecionar o botão de inspeção de elementos comn o menu de  ferramentas do programador aberto <br>
-![inspecaodeelemnentos](/estudos-e-bootcamps/Potencia%20Tech%20iFood%20-%20Desenvolvimento%20de%20Jogos/imgs/2inspetorelementos.png)
+![inspecaodeelemnentos](imgs/2inspetorelementos.png)
 
 # Trabalhando com Formulários
 Formulários: trechos em HTML em que o usuário irá inserir informações em campos que serão enviados para o servidor que irá processar a informação.
@@ -199,7 +199,7 @@ Formulários: trechos em HTML em que o usuário irá inserir informações em ca
 ## Tag "forms"
 Campo que fica dentro do body da página muito usado com servidores e javascript, o nome do formulário é opcional. **Action** descreve dentro da tag o que será feito com as informações do formulário após ele ser finalizado (cuidado para não infrigir em problema de CROSS ORIGIN, enviar formulários/informações que não é dono). O atributo **method** possui dois valores possíveis **"get"**, que <u>envia todas as informações e opções pela url</u> (o que é mais inseguro), e "post", que envia as informações no corpo da requisição (ou seja, de forma embutida na requisição). Na imagem pode-se observar como as informações ficam na url como **método GET**:
 
-![GETmethod](/estudos-e-bootcamps/Potencia%20Tech%20iFood%20-%20Desenvolvimento%20de%20Jogos/imgs/3methodget.png)
+![GETmethod](imgs/3methodget.png)
 
 - O atributo **target** define como será processado o envio do formulário (na mesma aba com "_self" ou em outra aba com "_blank"). **Autocomplete** por sua vez, caso esteja desativado ("off") não permite que seja preenchido automaticamente as informações, em caso de ativado ("on"), informações menos sensiveis são preenchidas automáticamente:
 
@@ -227,7 +227,7 @@ Campo que fica dentro do body da página muito usado com servidores e javascript
 </body>
 ~~~~
 
-![alerta](/estudos-e-bootcamps/Potencia%20Tech%20iFood%20-%20Desenvolvimento%20de%20Jogos/imgs/4exdealerta.png)
+![alerta](imgs/4exdealerta.png)
 
 Obs: onsubmit é muito usado para limitar acesso (por exemplo, por idade)
 
@@ -499,7 +499,6 @@ Cria uma lista de opções pré-definidas para preencher o formulário.
 
 ~~~html
 <label for="cars">Choose a car:</label>
-
 <select name="cars" id="cars">
   <option value="volvo">Volvo</option>
   <option value="saab">Saab</option>
@@ -508,7 +507,7 @@ Cria uma lista de opções pré-definidas para preencher o formulário.
 </select>
 ~~~
 
-Outra forma de desenvolver com essa tag. O uso do atribudo "selected" define o que vai estar aparecendo/marcado como padrão. Já o atributo "multiple" do select permite que mais de uma opção seja selecionada pelo usuário:
+Outra forma de desenvolver com essa tag. O uso do atribudo "selected" define o que vai estar aparecendo/marcado como padrão, mas que pode ser alterado pelo usuário no preenchimento. Já o atributo "multiple" do select permite que mais de uma opção seja selecionada pelo usuário:
 
 ~~~html
 <label>Cargo:</label>
@@ -520,6 +519,15 @@ Outra forma de desenvolver com essa tag. O uso do atribudo "selected" define o q
   <option value="Presidência">Presidência</option>
 </select>
 ~~~
+
+## Tag "textarea"
+Tag que permite adição de campo maior para adição de texto/de mais informações. Por padrão, essa área de texto é editável pelo usuário (pode ser redimensionada), pode ser travado o tamanho utilizando os atributos "rows" (linhas) e/ou "cols" (colunas) e definindo o tamanho máximo.
+
+~~~html
+<label>Assunto:</label><input type="text" name="subject"><br>
+<label>Mensagem:</label>
+<textarea rows="10" cols="100 "name="message"></textarea>
+<button type="submit">Enviar</button>
 
 # Links Úteis:
 - Para mais tags: [w3schools](https://www.w3schools.com/tags/)
