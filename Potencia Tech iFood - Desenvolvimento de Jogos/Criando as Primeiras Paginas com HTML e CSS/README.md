@@ -232,7 +232,7 @@ Campo que fica dentro do body da página muito usado com servidores e javascript
 Obs: onsubmit é muito usado para limitar acesso (por exemplo, por idade)
 
 ## Tag "input"
-Campo geralmente usado com label(nome) onde são inseridos valores, pode assumir diversos tipos cada um com sua cada particularidade. Atenção, dependendo do navegador, há valores de input que não foram/estam implemenbtados, ou seja, não irão funcionar.
+Campo geralmente usado com label(nome) onde são inseridos valores, pode assumir diversos tipos cada um com sua cada particularidade. Atenção, dependendo do navegador, há valores de input que não foram/estam implemenbtados, ou seja, não irão funcionar. **Label** funciona como uma etiqueta do campo, por padrão fica ao lado do campo e é utilizado para estruturar o texto html e permitir estilização com css.
 
 ~~~html
 <body>
@@ -528,6 +528,39 @@ Tag que permite adição de campo maior para adição de texto/de mais informaç
 <label>Mensagem:</label>
 <textarea rows="10" cols="100 "name="message"></textarea>
 <button type="submit">Enviar</button>
+
+# Estruturando HTML + Formatações
+
+1. Formatação
+Formatação de textos envolve a semântica. Algumas tags possuem alternativas que funcionam melhor na leitura do texto e na acessibilidade. Por exemplo, a tag "b" possui como alternativa a tag "strong" que dá um destaque melhor do texto e na leitura de acessibilidade é melhor reconhecida, por isso é importante estudar tags e suas alternativas para ver o que melhor funciona.
+
+- **Tag "font"**
+É possível criar o design do texto com css, mas as tags tsmbém funcionam nesse sentido. A tag "font" junto de atributos como color e face (define a fonte a ser usada no texto) permitem essa formatação e design do texto. 
+
+Em relação ao **atributo face**: para o navegador reconhecer uma fonte é necessário que ela esteja instalada no computador que for abrir a página, por isso é interessante que seja adicionado fontes alternativas para situações que a fonte principal não esteja instalada (o navegador vai testar cada opção na ordem, caso não ache uma instalada, utilizará a fonte padrão na renderização).
+
+2. Estrutura de página HTML
+Para uma estrutura bem criada, são usadas duas tags consideradas coringas que não carregam peso semântico e servem para delimitaar espaço: **tag div** e **tag span**.
+
+- Tag **div**
+Define espaços/quadrados para informações específicas. Div tem uma formatação em block, preenche a horizontal inteira da página por padrão. Abaixo um exemplo de delimitação de páginas do Stack Overflow:
+
+![ex de uso de div](imgs/10%20exusodiv.png)"
+
+- Tag **span**
+Consegue fazer uma delimitação que não ocupa toda a horizontal da página, pode ser aplicado especificado em um único elemento o que permite aplicação de estilos em trechos, o que não seria possível.
+
+- Tag **fieldset**
+Tag estrutural que permite agrupar elementos relacionados em formulários. Pode ser usado com a tag **legend** para criar uma legenda que atua no encapsulamento criado com a tag fieldset.
+
+- Tag **embed**
+Tag não mais utilizada, pois tornou-se obsoleta. Históricamente surgiu para carregar mídias externas de forma mais assincrona.
+
+- Tag **iframes**
+Atenção: tomar cuidado, pois essa tag pode tornar o site inseguro. Esta tag permite abrir conteúdo de outra página na sua página.
+
+3. Cores em HTML
+Nem todas as cores são aceitas por todos os navegadores. É possível usar cores por nome ou por valores como RGB, HEX e RGBA, entre outros.
 
 # Links Úteis:
 - Para mais tags: [w3schools](https://www.w3schools.com/tags/)
