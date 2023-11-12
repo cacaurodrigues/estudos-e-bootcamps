@@ -14,7 +14,7 @@ color: red;
 ## Formas de Declarar o CSS
 Há diversas formas de fazer issso:
 
-- CSS Inine: adiciona as propriedades com atributo HMTL "style" dentro das tags HTML, elemento por elemento. Menos usual, pois é de dificil manutenção por ser elemento a elmeneto, no entanto é útil quando não há acesso ao arquivo acesso ao sistema ou quando é preciso sobrescrever um estilo. Outra utilidade é testar de forma rápida o estilo.
+- CSS Inine: adiciona as propriedades com atributo HMTL "style" dentro das tags HTML, elemento por elemento. Menos usual, pois é de dificil manutenção por ser elemento a elemento, no entanto é útil quando não há acesso ao arquivo acesso ao sistema ou quando é preciso sobrescrever um estilo. Outra utilidade é testar de forma rápida o estilo.
 
 ~~~HTML
 <body>
@@ -50,7 +50,7 @@ Para fazer o estilo funcionar, é preciso fazer um linnk entre as páginas no ar
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fundamentos Css</title>
-    <link rel="stylesheet" href=".\assets\css\style.css"
+    <link rel="stylesheet" href=".\assets\css\style.css">
 </head>
 ~~~
 
@@ -83,7 +83,7 @@ Busca elementos através do atributo "id". Esse atributo está disponível em to
 <body>
     <p id="texto-exemplo">Texto de exemplo</p>
 </body>
-
+~~~
 
 3. Seletor por Classe (.)
 Busca elementos atráves do atributo "class", que é uma forma de indetificar vários elementos e, consequentement, aplicar estilo aos elementos dessa classe. Diferente do seletor por ID, que é unitário. Outro detalhe em relação a classe é que podemos definir mais de uma classe por elemento, sendo que para o código entenda isso é necessário apenas adicionar espaço m branco entre o nome das classes, classes essas que serão independentes. Para definir o estilo na declaração, o nome da classe deve ser precedido de **.** (ponto).
