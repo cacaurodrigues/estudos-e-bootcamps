@@ -1,0 +1,87 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #fc1e8a;
+    user-select: none;
+}
+
+.container{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    background: linear-gradient(90deg, #efd5ff 0%, #515ada 100%);
+    padding: 40px 60px;
+}
+
+h2 {
+    font-size: 3em; /*fonte escalavel*/
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+}
+
+.reset {
+    padding: 15px 20px;
+    width: 100%;
+    color: #000;
+    background-color: #fff;
+    border: none;
+    font-size: 1.5em;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-weight: 600;
+  }
+
+.reset:focus {
+    color: #ec38bc;
+    background-color: #000;
+}
+
+.game {
+    /*border: 1px solid red; borda retirada para dar as cartas corretamete*/ 
+    width: 430px;
+    height: 430px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    transform-style: preserve-3d;
+    perspective: 300px;
+}
+
+.item {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    font-size: 3em; /*tamanho dos emojis*/
+    transform: rotateY(180deg); /*efeito de rodar cartas*/
+    transition: 0.20s; /*tempo de rotaçao*/
+}
+
+.item::after { /*oque acontece com os elementos*/
+    content: "";
+    position: absolute;
+    inset: 0; /*sobrepoe elemento anterior*/
+    background: #696868;
+    transform: rotateY(0deg); /*efeito de rodar cartas*/
+    transition: 0.20s;
+    backface-visibility: hidden;
+}
+
+.item.boxOpen {
+    transform: rotateY(0deg);
+}
+
+.boxOpen::after,
+.boxMatch::after {
+    transform: rotateY(180deg);
+}
