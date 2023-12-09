@@ -28,8 +28,8 @@ function countDown(){
     }
 }
 
-function playSound(audio){
-    let audio = new Audio(`./src/audios/${audio}.m4a`);
+function playSound(audiosound){
+    let audio = new Audio(`./src/audios/${audiosound}.m4a`);
     audio.volume = 0.2;
     audio.play();
 }
